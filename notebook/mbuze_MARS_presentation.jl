@@ -17,7 +17,8 @@ end
 # ╔═╡ 3514a0be-49e7-47d5-bd92-784a4d745745
 begin
   	import Pkg
-  	Pkg.activate(@__DIR__)
+  	Pkg.activate(Base.current_project())
+  	#Pkg.activate(@__DIR__)
 	#Pkg.status()
 	using Markdown
 	using PlutoUI
