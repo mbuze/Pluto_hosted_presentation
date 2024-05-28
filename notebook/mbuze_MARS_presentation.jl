@@ -708,7 +708,7 @@ TwoColumn(html"""
 		<ul>
 			<li><h5><span id="green"> Dr Samuel Murphy (Nuclear Materials and Engineering)</span> - MD simulations, DefAP: A python code for the analysis of point defects in crystalline solids</li>
 			<li><h5><span id="green"> Dr Neil Drummond (Physics) </span> - Electronic-structure calculation and quantum Monte Carlo simulation for 2D materials</li>
-			<li><h5><span id="green"> Prof. Abbie Trewin (Professor of Materials Chemistry) </span> - The Amorphous Builder (Ambuild) code which involves geometry optimisation and running of MD simulations</li>
+			<li><h5><span id="green"> Prof. Abbie Trewin (Materials Chemistry) </span> - The Amorphous Builder (Ambuild) code which involves geometry optimisation and running of MD simulations</li>
 			<li><h5><span id="green"> Dr Wei Wen (Mechanical Engineering) </span> - multi-scale modelling of Crystal Plasticity (CP).</li>
 		</ul>
 	"""
