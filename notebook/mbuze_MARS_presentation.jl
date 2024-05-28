@@ -17,7 +17,8 @@ end
 # ╔═╡ 3514a0be-49e7-47d5-bd92-784a4d745745
 begin
   	import Pkg
-	Pkg.activate(Base.current_project())
+  	Pkg.activate(@__DIR__)
+	#Pkg.status()
 	using Markdown
 	using PlutoUI
 	using Plots
@@ -145,9 +146,6 @@ end
 gr(dpi=400)
 #gr()
 
-# ╔═╡ 8702a769-6167-4342-9229-914f1f076a38
-ChooseDisplayMode()
-
 # ╔═╡ 2c08d228-4afa-4d6b-ba8b-df22abb5ee09
 html"""
 <style>
@@ -165,6 +163,9 @@ html"""
 	}
 </style>
 """
+
+# ╔═╡ 8702a769-6167-4342-9229-914f1f076a38
+ChooseDisplayMode()
 
 # ╔═╡ 930f698e-1827-4086-99d8-e8080ea1be4e
 # html"""
@@ -411,7 +412,7 @@ vision, image processing,</span> <span id="green">materials science.</span></li>
 	<br>
 	<li><h5><span id="pink">Invitation to Paris in June to present my work.</li>
 	<br>
-	<li><h5>Future funding proposals: <span id="orange">industry-focused Horizon Europe grant with Tata Steel, EPSRC Small Grant.</li>
+	<li><h5>Future funding proposals: <span id="green">industry-focused Horizon Europe grant with Tata Steel</span>, <span id="magenta">EPSRC Small Grant.</li>
 	</ul> 
 	""",
 	md""" $(Resource(pyapd_logo, :width => 1000))
@@ -972,8 +973,8 @@ TwoColumn(md""" $nbsp $nbsp """ , md"""
 # ╠═e2641ad6-4a54-4715-8669-27c62793a94d
 # ╠═18e0a59e-89bb-4db3-aaab-269fbfa3a8a7
 # ╠═25392b9f-a8d2-4609-88d4-c33e78853840
-# ╠═8702a769-6167-4342-9229-914f1f076a38
 # ╠═2c08d228-4afa-4d6b-ba8b-df22abb5ee09
+# ╠═8702a769-6167-4342-9229-914f1f076a38
 # ╟─930f698e-1827-4086-99d8-e8080ea1be4e
 # ╟─a753156d-88a1-49ca-9223-5cb4077cc626
 # ╟─fa0842af-36f4-46ef-8faf-dc5a6593957b
@@ -1026,4 +1027,4 @@ TwoColumn(md""" $nbsp $nbsp """ , md"""
 # ╟─4a87efe7-f1ec-49ba-99d4-75515879d540
 # ╟─2edfa6cb-beb4-4f63-a736-7efdaf3dd07e
 # ╟─f910535b-4746-4845-b5ec-7fecc9b15656
-# ╠═eadb07d9-9227-4479-890a-f3bea3efc8f5
+# ╟─eadb07d9-9227-4479-890a-f3bea3efc8f5
