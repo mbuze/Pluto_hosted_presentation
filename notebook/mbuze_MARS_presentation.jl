@@ -17,8 +17,8 @@ end
 # ╔═╡ 3514a0be-49e7-47d5-bd92-784a4d745745
 begin
   	import Pkg
-  	Pkg.activate(Base.current_project())
   	#Pkg.activate(@__DIR__)
+	Pkg.activate(Base.current_project())
 	#Pkg.status()
 	using Markdown
 	using PlutoUI
@@ -34,7 +34,7 @@ end
 # ╔═╡ d7e723d8-04f4-464b-9572-793f6349b63e
 using BifurcationKit
 
-# ╔═╡ 2b621d5e-1d9e-43ee-98db-1d5b5f2a80d7
+# ╔═╡ 36d84ac7-b0fd-4d70-aa94-212db92696d9
 using OptimalTransport
 
 # ╔═╡ 9c684b79-bf17-4ee2-a2f5-9c5ef6dcae59
@@ -138,8 +138,12 @@ end
 begin
 	surface_step_video =  "https://i.imgur.com/0hMOElU.mp4"
 	pyapd_logo = "https://raw.githubusercontent.com/mbuze/PyAPD/main/logo/logo.png"
-	ebsd_scan = "https://i.imgur.com/6kuobQz.png"
+	#ebsd_scan = "https://i.imgur.com/6kuobQz.png"
+	ebsd_scan = "https://i.imgur.com/YOQ9mzO.png"
+	apd_ebsd = "https://i.imgur.com/HobMKDG.png"
 	ip_figure = "https://mbuze.github.io/LJ.png"
+	fracture_silicon = "https://mbuze.github.io/ncflex2.jpg"
+	tata_steel = "https://i.guim.co.uk/img/media/447f7e234d9f432480a3c5bb0ec596c12ce869c5/0_340_5100_3060/master/5100.jpg?width=1900&dpr=1&s=none"
 	nothing
 end
 
@@ -200,36 +204,28 @@ md"""
 
 """
 
+# ╔═╡ d3dffafc-227d-4258-93d1-61d4cede38ab
+md""" ## My research profile $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp  $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp  $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp (1) """
+
 # ╔═╡ 60cf1098-5887-49fa-b28b-7d14d75d6ef2
-md"""
-## Hello
+TwoColumnWideLeft(html"""
+<ul>
+  	<li><h4>Research at the intersection of <span id="green">applied and computational mathematics</span> and <span id="green">mathematical analysis</h4></li>
+	<br>
+	<li><h4>Applications in <span id="pink">materials science, biology, physics</span> and <span id="pink"> data science</span></h4></li>
+	<br>
+	<li><h4>Tools: <span id="orange">calculus of variations, bifurcation theory, numerical analysis, optimal transport, approximation theory, uncertainty quantification, scientific GPU computing, machine learning</span></h4></li>
+	<br><br><br><br><br><br>
+	<li><h4>Three major ongoing research projects:</h4></li>
+</ul>
+""",
+	md"""
+	$(Resource(ip_figure, :width => 1000))
+	"""
+)
 
-* #### My research spans a wide range of topics at the intersection of **applied and computational mathematics** and **mathematical analysis**
-* #### I am primarily inspired by **applications in materials science, biology, physics and data science**.
-* #### I use and develop tools in:
-"""
-
-# ╔═╡ 8b5b4088-060e-45e7-b3ff-1581f27a67df
-md"""
-| calculus of variations | bifurcation theory | numerical analysis | optimal transport |
-|:---------- | ---------- |:------------:|:------------:|
-|    |   |  | | 
-"""
-
-# ╔═╡ 035f9e75-5255-4798-83e1-e2723f1837f4
-md"""
-| approximation theory | uncertainty quantification | scientific GPU computing | machine learning |
-|:---------- | ---------- |:------------:|:------------:|
-|    |   |  | |
-"""
-
-# ╔═╡ acec9ef0-9e35-4a31-9a14-2e4114ed6e04
-md"""
-\
-
-\
-
-* #### I currently have three major ongoing research projects:
+# ╔═╡ f429d1e1-a6b3-4677-8420-7b6fb4e565c2
+TwoColumnWideLeft(md"""
 !!! note "A"
     #### Discrete modelling of nucleation and migration of defects in materials
 
@@ -238,11 +234,18 @@ md"""
 
 !!! tip "C"
     #### Uncertainty quantification for machine learning interatomic potentials
+""",
+md"""
+$nbsp  $nbsp
+$nbsp  $nbsp
+
+$(Resource(pyapd_logo, :width => 1000))
 """
+)
 
 # ╔═╡ 6a11493b-e486-4dee-a0ba-80fdd9b542da
 md"""
-## Discrete modelling of nucleation and migration of defects in materials
+## Discrete modelling of nucleation and migration of defects in materials $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp  $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp  $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp (2)
 
 \
 
@@ -252,43 +255,89 @@ md"""
 """
 
 # ╔═╡ cd58a897-3e18-4eb2-a81d-89dfb00257d0
-md""" $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp  $(Resource(surface_step_video, :width => 1300))
+md""" $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp  $(Resource(surface_step_video, :width => 1300, :autoplay => "", :loop => ""))
 	"""
 
 # ╔═╡ d5a8d207-80a6-4d22-b500-9448cbd0c339
 
 
-# ╔═╡ 103b2f93-ebf0-42c8-92ca-2632a9b1005b
-
-
-# ╔═╡ c3790891-2336-4108-9285-3ed85de872d7
-TwoColumn(md""" $nbsp $nbsp """ , md"""
-#### (1)""")
-
 # ╔═╡ 0ed3fa19-b22b-46ca-a090-fcde0383d0d3
 md"""
-## Discrete modelling of nucleation and migration of defects in materials
+## Discrete modelling of nucleation and migration of defects in materials $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp  $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp  $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp (3)
 """
 
 # ╔═╡ 3d0a89b5-3733-4029-a908-d31c8a38265b
-html"""
-	 <ul>
-  	<li><h5>Modern high-throughput molecular and atomistic simulations rely on sophisticated optimisation tools to effectively <span id="magenta">explore the severely non-convex energy landscapes.</span></li>
-  	<li><h5><span id="magenta">Bifurcation theory-based techniques</span> such as numerical continuation and deflation <span id="magenta">remain underutilised.</span></li>
-  	<br>
-	<li><h5>My work: mathematical and numerical <span id="green">analysis of idealised atomistic models, development of the NCFlex algorithm</span> (numerical continuation + flexible boundary conditions), <span id="pink">leading a working group on the adoption of numerical continuation tools in atomistic modelling of materials at the IPAM.</li>
-	<li><h5><span id="green">5 published papers (SIMA, M3AS, M2AN, PhysRevE, Nonlinearity), one preprint (under review at MMS).</li>
+TwoColumn(html"""
+<ul><h4>
+<li> Background:
+	<ul>
+	  	<li><h4>Large nonlinear systems of atoms interacting under a machine learning interatomic potential -> <span id="magenta"> severely non-convex energy landscapes</span></li>
+		<br>
+		<li><h4>It is a big challenge to describe <span id="magenta">complicated networks of local minima / saddle points / limit cycles</span>, which ultimately describe material behaviour</li>
+  		<br>
+  	</ul>
+<li> State of the art:
+	<ul>
+	<li> <div>Run expensive high-throughput molecular and atomistic simulations, build a network of local minima, use expensive saddle point search algorithms</div> -> <span id="green">completeness of the assembled network is an issue </span> </li>
 	<br>
-	<li><h5>The broader adoption of such tools at atomistic scales has been identified as highly desirable in a recent white paper, a summary document of the <span id="pink">IPAM Long Program New Mathematics for the Exascale: Applications to Materials Science</span>.</li>
-	<li><h5><span id="pink">ICMS Workshop: Computational Materials Science and Mathematics at the Particle and Atomistic Scales, November 2025, £24,000 funding.</span></li>
-	<br>
-	<li><h5>Future funding proposals: <span id="orange">EPSRC Postdoctoral Fellowship -> New Investigator Award, Leverhulme Research Project Grants scheme.</li>
-	<br>
-	<li><h6><div>Collaborators:</div>C.Ortner (UBC), T.Hudson (Warwick), J.Braun (Heriot-Watt), J.Kermode (Warwick), F.Birks (Warwick, PhD student I help supervise), S.Bagchi (Los Alamos), D.Perez (Los Alamos), T.Swinburne (Marseille), P. van Meurs (Kanazawa)	</ul> 
+	</ul>
+<li> What I have done: 
+	<ul>
+	<li><h4> Development and analysis of <span id="orange">bifurcation theory-based approaches to solving this problem </span> in atomistic fracture simulations with very promising results!
+	<br><br>
+	<li><h4> <div>Leading a working group on <span id="orange">the wider adoption of such tools in atomistic modelling of materials</span>:</div><br> <div> -> <span id="pink"> IPAM Long Program New Mathematics for the Exascale: Applications to Materials Science</span> </div> -> <span id="pink">ICMS Workshop: Computational Materials Science and Mathematics at the Particle and Atomistic Scales, November 2025, £24,000 funding.</span> </li>
+	</ul>
+</ul>
 	"""
+	,
+	md"""
+	$(Resource(fracture_silicon, :width => 1000))
+	"""
+)
+
+# ╔═╡ dcb910b6-31d5-4232-8f36-125679216d88
+md"""
+## Discrete modelling of nucleation and migration of defects in materials $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp  $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp  $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp (4)
+"""
+
+# ╔═╡ f5e88b25-be59-443a-8b60-f7dbd935ee68
+
+
+# ╔═╡ e16536ad-4f0f-40c2-9ae3-26857e47743f
+md"""
+#### Julia's sophisticated bifurcation analysis library:
+"""
 
 # ╔═╡ 1705424a-163d-4ec3-b5d5-c5bd4b0ca7ea
 @bind ptt Slider(1:1:length(br), default=1)
+
+# ╔═╡ 3eed7b97-c5f4-4d4e-83c9-0ea559c7c438
+TwoColumnWideLeft(html"""
+<ul><h4>
+<li> What I want to do next:
+	<ul>
+	<li> <div>Derive and analyse <span id="magenta">new atomistically-consistent deflation operators</span></div> -> Deflation techniques for PDEs by Prof. Patrick Farell (Oxford)
+	<br><br>
+	<li> Tackle dynamic problems: <span id="magenta">tracking limit cycles in molecular dynamics</span>, e.g. in dynamic fracture
+	<br><br>
+	<li> <div> Create a bespoke <span id="magenta">atomistic bifurcation library in Python/Julia</span>:</div> -> a wrapper around LAMMPS (Large-scale Atomic/Molecular Massively Parallel Simulator)
+	<div>-> compatible with modern GPU acceleration approaches</div>
+	-> target <span id="green">very large systems with machine learning interatomic potentials (tens of millions of atoms, tens of thousands of potential parameters)</span>.
+	<br><br>
+	<li> Apply for grant funding: <span id="orange">EPSRC Postdoctoral Fellowship -> New Investigator Award, Leverhulme Research Project Grants scheme.
+	<br><br>
+	</ul>
+	<li> <span id="pink">Ultimate goal: make bifurcation theory tools mainstream in this field!</span>
+</ul>
+"""
+	,
+begin
+	plot(br)#,xlabel="", ylabel="")
+	scatter!((br.sol[ptt].p,br.sol[ptt].x[1]),markersize=12)
+	plot!(size=(500,500),legend=false,)
+	
+end
+)
 
 # ╔═╡ cd8181a0-53be-40f0-94ac-680e41192e31
 TwoColumn(md"""
@@ -296,51 +345,83 @@ Find lines belonging to the set
 ```math
 \{ (x,\mu) \in \mathbb{R}^2 \,\mid\, F(x,\mu)= 0\},\quad\text{ where }\quad F(x,\mu) = \mu + x - \frac13x^3
 ```
-```
+"""
+, 
+md"""
+	```
 F(x, p) = @. p.μ + x - x^3/3
 prob = BifurcationProblem(F, [-2.], (μ = -1.,), (@lens _.μ);
 	record_from_solution = (x,p) -> (x = x[1]))
 br = continuation(prob, PALC(), ContinuationPar(p_min = -1., p_max = 1.))
 ```
-"""	, 
-begin
-	plot(br,xlabel="", ylabel="")
-	scatter!((br.sol[ptt].p,br.sol[ptt].x[1]),markersize=12)
-	plot!(size=(1000,300),legend=false,)
-	
-end
+"""	
 )
-
-# ╔═╡ 6a8aeb0a-a570-4f74-83d3-ab321ab25911
-TwoColumn(md""" $nbsp $nbsp """ , md"""
-#### (2)""")
 
 # ╔═╡ 2fab6ede-98d3-4783-9bc3-6ae4f95e9c8e
 md"""
-## Optimal transport: theory and applications
+## Optimal Transport: Application to Materials Science  $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp (5)
 """
 
-# ╔═╡ 9a6e9a57-8ac1-47f1-b00b-7c3907b2720e
+# ╔═╡ 1ca19cdb-26a9-4d8b-86bb-1306e9c8e449
 TwoColumnWideLeft(
 	html"""
-	 <ul>
-  	<li><h5>Optimal Transport theory continues to develop at pace as one of the fundamental mathematical theories with an ever-growing list of <span id="magenta">diverse applications in fields such as machine learning, economics, computer
-vision, image processing,</span> <span id="green">materials science.</span></li>
-  	<li><h5>Recent advances include <span id="magenta">theory of unbalanced OT</span> and <span id="green">GPU-accelerated computational OT.</span></li>
-	<br>
-	<li><h5> <div> My work: (i) theory of unbalanced OT: <span id="magenta">conic entropic regularisation, barycenters</span>;</div>
-	(ii) <span id="green"> GPU-accelerated semi-discrete OT with exotic costs (with materials modelling application).</span></li>
-	<li><h5>3 preprints (under review in <span id="magenta">SIMA</span> and <span id="green">Comput. Mater. Sci.</span>, one to be submitted to <span id="magenta">Nonlinearity</a>)</li>
-	<br>
-	<li><h5><span id="pink">Invitation to Paris in June to present my work.</li>
-	<br>
-	<li><h5>Future funding proposals: <span id="orange">industry-focused Horizon Europe grant with Tata Steel, EPSRC Small Grant.</li>
-	</ul> 
-	""",
-	md""" $(Resource(pyapd_logo, :width => 1000))
-	$nbsp PyAPD: A Python library for computing (optimal) anisotropic power diagrams using GPU acceleration\
+<h5>Jasper Jolly, The Guardian, Sat 15 July 2023:
+<h5>``<span id="pink">To list the products that use steel is to list much of modern life</span>:
+<ul>
+<li> Port Talbot provided most of the steel in the Nissan Leaf electric car, built in Sunderland.
+	<br><br>
+<li> Heinz baked beans “tins” are made of its steel, as are radiators in many homes.
+	<br><br>
+<li> Construction is the plant’s biggest market: Tata made blue cladding for Everton’s football stadium, and red cladding for Liverpool’s Anfield on the other side of Stanley Park.
+	<br><br>
+<li> Another crucial growth area – and one key for the UK’s energy security – is <span id="magenta">zero-emissions power: wind turbines sit on steel stalks, and nuclear reactors are encased in steel</span>.''
+</ul>
+<br>
+Any optimisation of the industrial process in steel production can have massive posititve impact on reducing emissions:
+<ul>
+	<li><span id="green">Blast furnace at Port Talbot produced </span> 5.7m tonnes of carbon dioxide in 2022 – about <span id="green">2% of the total for the entire UK</span>.
+	<br><br>
+	<li>Electric arc furnaces (EAF) produce recycled steel with much lower carbon footprint. 
+	<br><br>
+	<li><span id="orange">Recycled steel has different properties, including the morphology of grains.
+"""
+	,
+		md"""
+	$(Resource(tata_steel, :width => 800))
+
+	$nbsp $nbsp $nbsp $nbsp $(Resource(ebsd_scan, :height => 500))
+
+	"""
+)
+
+# ╔═╡ 4f7e0ee2-4f32-4bac-ad87-e45576444fdc
+md"""
+## Optimal Transport: Application to Materials Science  $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp (6)
+"""
+
+# ╔═╡ 740278d3-c252-4810-953b-ab4bca22a8a7
+TwoColumn(html"""
+<ul><h4>
+<li> Background:
+	<ul>
+	  	<li><h4>Understanding the deformation behaviour of polycrystalline materials is crucial for numerous industrial applications
+		<li> There are powerful computational methods for <span id="magenta">simulating the mechanical behaviour of virtual polycrystals </li>
+		<li> <span id="orange">The accuracy strongly depends on the generated Representative Volume Elements (RVEs)
 	
-	######  Collaborators: D.Bourne (Heriot-Watt), S.Roper (Glasgow), J.Feydy (Inria Paris), K. Sedighiani (Tata Steel), H.Duong (Birmingham).
+  	</ul>
+<li> State of the art:
+	<ul>
+	<li> <div>Use of <span id="orange">Voronoi / Power Diagrams to generate simplified unrealistic microstructures </div>
+	<div> -> Fitting to prescribed spatial anisotropy of grains is a huge challenge </div>
+	<span id="green"> -> Straight boundaries! </li>
+	
+	</ul>
+</ul>
+	"""
+	,
+	md"""
+	$(Resource(pyapd_logo, :width => 1000))
+	###### $nbsp $nbsp $nbsp  PyAPD: A Python library for computing (optimal) anisotropic power diagrams using GPU acceleration
 	"""
 )
 
@@ -348,17 +429,32 @@ vision, image processing,</span> <span id="green">materials science.</span></li>
 pyapd = pyimport("PyAPD")
 
 # ╔═╡ c62a52e1-249b-48a6-90ae-f8552bf9a224
-@bind NN Slider(10:5:150, default=50)
+TwoColumn(@bind NN Slider(10:5:150, default=50)
+,
+@bind aniso Slider(0:0.05:0.7, default=0.0) 
+)
 
 # ╔═╡ 3ec7601c-2b0f-4c47-8467-4079a338b155
-apd = pyapd.apd_system(N=NN, pixel_size_prefactor=4,  ani_thres=0.5)
+apd = pyapd.apd_system(N=NN, pixel_size_prefactor=4,  ani_thres=aniso)
 
 # ╔═╡ e8496864-b5a1-4a08-b2da-c7f882f35763
 apd.find_optimal_W()
 
-# ╔═╡ ed1fa3d5-ef9b-489a-9f73-0067896f1c95
-ThreeColumn(md"""
-Anistropic Power Diagrams generated by $\{x_i,A_i,w_i\}_{i=1}^N$, where $N=$ $NN.
+# ╔═╡ 8d4e2dde-6e25-483c-9026-2d6234973290
+ThreeColumn(html"""
+<h4> <ul>
+	<li> What I have done: 
+	<ul>
+	<li><h4><div>Development of <span id="pink">GPU optimal transport tools for modelling polycystals </span> as Anisotropic Power Diagrams</div> 
+	<div>-> three orders of magnitude speed-up</div>
+	<div>-> <span id="pink"> generation of synthetic high-resolution microstructures in seconds</div>
+	<div>-> spatial anisotropy for free</div>
+	-> <span id="green">curved boundaries!
+	</ul>
+"""
+	,
+	md"""
+Anisotropic Power Diagrams generated by $\{x_i,A_i,w_i\}_{i=1}^N$, where $N=$ $NN.
 ```math
   L_i = \{{ x} \in \Omega\,\mid\, |{ x}-{ x_i}|^2_{ A_i} - { w_i} \leq |{ x}-{ x_j}|^2_{ A_j} - { w_j},\quad \forall j\},
 ```
@@ -370,7 +466,8 @@ LL = Int(sqrt(length(apd.Y)))
 heatmap_data = reshape(convert(Array,PyArray(assignment)),(LL,LL))
 heatmap(1:LL,1:LL,heatmap_data)
 ```
-"""	, 
+"""	
+	,
 begin
 	assignment = apd.assemble_apd()
 	LL = Int(sqrt(length(apd.Y)))
@@ -385,43 +482,71 @@ begin
     size=(650, 355),          # Figure size
 )
 end
-	,
-		md""" $(Resource(ebsd_scan, :height => 350))
-	"""
 )
 
-# ╔═╡ 9b62c56d-4ced-4117-b20f-040a84ce8d3a
-TwoColumn(md""" $nbsp $nbsp """ , md"""
-#### (3)""")
-
-# ╔═╡ 127a3661-b34a-458d-adea-7d9e98ed3415
+# ╔═╡ 808b6f22-29f9-43cc-a7f9-be1cd90e7f19
 md"""
-## Optimal transport: theory and applications
+## Optimal Transport: Application to Materials Science  $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp (7)
 """
 
-# ╔═╡ 7ac043a5-f6f9-4826-a8f1-29fdaa7687b1
-TwoColumnWideLeft(
-	html"""
-	 <ul>
-  	<li><h5>Optimal Transport theory continues to develop at pace as one of the fundamental mathematical theories with an ever-growing list of <span id="magenta">diverse applications in fields such as machine learning, economics, computer
-vision, image processing,</span> <span id="green">materials science.</span></li>
-  	<li><h5>Recent advances include <span id="magenta">theory of unbalanced OT</span> and <span id="green">GPU-accelerated computational OT.</span></li>
-	<br>
-	<li><h5> <div> My work: (i) theory of unbalanced OT: <span id="magenta">conic entropic regularisation, barycenters</span>;</div>
-	(ii) <span id="green"> GPU-accelerated semi-discrete OT with exotic costs (with materials modelling application).</span></li>
-	<li><h5>3 preprints (under review in <span id="magenta">SIMA</span> and <span id="green">Comput. Mater. Sci.</span>, one to be submitted to <span id="magenta">Nonlinearity</a>)</li>
-	<br>
-	<li><h5><span id="pink">Invitation to Paris in June to present my work.</li>
-	<br>
-	<li><h5>Future funding proposals: <span id="green">industry-focused Horizon Europe grant with Tata Steel</span>, <span id="magenta">EPSRC Small Grant.</li>
-	</ul> 
-	""",
-	md""" $(Resource(pyapd_logo, :width => 1000))
-	$nbsp PyAPD: A Python library for computing (optimal) anisotropic power diagrams using GPU acceleration\
-	
-	######  Collaborators: D.Bourne (Heriot-Watt), S.Roper (Glasgow), J.Feydy (Inria Paris), K. Sedighiani (Tata Steel), H.Duong (Birmingham).
+# ╔═╡ 0fd0bfae-5ccb-46f7-908c-731843b28bc1
+
+
+# ╔═╡ 1810a57b-e1d8-4a09-a58e-c5c1a2aabc64
+
+
+# ╔═╡ f1825a7d-1657-4648-8260-98d6884d0011
+
+
+# ╔═╡ 182a6eae-f48d-48b4-ab24-eca615ee5367
+ThreeColumn(html"""
+<ul><h4>
+<li> What I want to do next:
+	<ul>
+	<li> <div><span id="magenta">Digital twin framework</span></div> -> Tracking evolution of polycrystals
+	<br><br>
+	<li><div> <span id="orange">Assisting virtual design</span> </div> -> homogenisation for crystal plasticity simulations for difficult grain morphologies
+	<br><br>
+	<li> <div> <span id="pink">Algorithmic development</span>: </div> -> continuation acceleration 
+	<div>-> boundary methods, adaptable pixel sizes</div>
+	</ul>
+"""
+	,
+		md"""
+$(Resource(ebsd_scan, :height => 400)) 
+
+	"""
+	,
+	md""" 
+	$(Resource(apd_ebsd, :height => 400))
 	"""
 )
+
+# ╔═╡ a566f782-5f68-4354-9f5c-b81334a08142
+
+
+# ╔═╡ 9c4cc9b6-8e88-4016-932e-f90770044376
+
+
+# ╔═╡ 1ee98213-7875-4d54-8004-aea2240cee50
+html"""
+
+<ul><h4>
+	<ul>
+<li> Apply for grant funding: <span id="green">industry-focused Horizon Europe grant with Tata Steel</span>
+	<br><br>
+</ul>
+<li> <span id="pink">Long-term ambitious goal: incorporate more physics into the optimal transport approach</span>
+</ul>
+"""
+
+# ╔═╡ 929c6dc8-9e16-4ccf-b288-012cb84d0c8e
+
+
+# ╔═╡ ed8f828a-b59f-42af-b55d-65fbdaf15da3
+md"""
+## Unbalanced optimal transport: entropy regularisation and barycentric data compression $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp(8)
+"""
 
 # ╔═╡ 94d185b1-e3b7-46fe-a4ff-60c5956d86b2
 @bind λ Slider(0.1:0.1:0.9, default=0.5)
@@ -445,8 +570,48 @@ begin
 	end
 end
 
-# ╔═╡ 39e98f07-d1d7-4f4b-b052-77dfa4c5d322
-TwoColumnWideLeft(md"""
+# ╔═╡ b42ed316-95f9-4082-a328-7614ead55434
+TwoColumnWideLeft(html"""
+<ul><h4>
+<li> Background:
+	<ul>
+	  	<li><h4>Optimal Transport (OT) problem: minimize the cost of transportation, <span id="orange">defines a distance between probability measures, useful in data clustering</span>
+		<li> An ever-growing list of diverse applications in fields such as <span id="magenta">machine learning, economics, computer
+vision, image processing,</span> <span id="magenta">materials science</span></li>
+		<li><h4>Recent advances include theory of unbalanced OT (UOT)</span></li>
+  	</ul>
+<li> State of the art:
+	<ul>
+	<li> <div> Computational OT: fast solvers based on Sinkhorn algorithm</div>-> <span id="green">to a lesser extent also works for UOT </li>
+	<li> <span id="pink">partial results on unbalanced barycenters</span>
+	</ul>
+</ul>
+	"""
+	,
+begin
+	plt3
+end# $nbsp $nbsp $nbsp  PyAPD: A Python library for computing (optimal) anisotropic power diagrams using GPU acceleration
+)
+
+# ╔═╡ e55fb776-b8fd-4414-b5b0-8cd013b325d2
+TwoColumn(html"""
+<h4> <ul>
+	<li> What I have done: 
+	<ul>
+	<li><h4><div>Development of the theory of conic entropy regularisation of UOT</div> 
+	<div>-> <span id="green">potentially numerically preferable to Sinkhorn algorithm for UOT</div>
+	<li><h4><div>Development of a <span id="pink">new unbalanced barycentric framework </span> which retains more features of the balanced case</div> 
+	</ul>
+	<li> What I want to do next:
+	<ul>
+		<li> Algorithmic development for conic UOT
+		<li> Apply to <span id="green">EPSRC Small Grant scheme
+		<li> <div>Use such OT tools in applications</div>
+		-> <span id="pink"> Dr Amber Leeson: <i>Melt probabilities and surface temperature trends on the Greenland ice sheet using a Gaussian mixture model</i>
+	</ul>
+"""
+	,
+	md"""
 Finding a barycentric description of a set of $N$ probability measures:
 ```math
 \inf_{\nu \in \mathcal{P}(\mathbb{R})} \sum_{i=1}^N \lambda_i{\rm OT}(\mu_i,\nu),\quad  {\rm OT}(\mu,\nu) = \min_{\gamma} \left\{ \int_{\mathbb R \times \mathbb R} |x-y|^2 d\gamma(x,y)\, \Bigm\vert \, \gamma \in \mathcal{P}(\mathbb R \times \mathbb R),\; \gamma_x = \mu,\; \gamma_y = \nu\right\}
@@ -466,40 +631,52 @@ for λ1 in (λ)
 	plot!(plt3, support, a; linewidth=4)
 end
 ```
-"""	, 
-begin
-	plt3
-end
+"""
 )
-
-# ╔═╡ f0face85-80c0-4367-b5e2-a13c4598bcf7
-TwoColumn(md""" $nbsp $nbsp """ , md"""
-#### (4)""")
 
 # ╔═╡ d4660044-8438-4502-84e1-031813e9ca25
 md"""
-## Uncertainty Quantification for Machine Learning Interatomic Potentials
+## Uncertainty Quantification for Machine Learning Interatomic Potentials (UQxMLIPs) $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp  (9) 
 """
 
-# ╔═╡ 7ba63a0e-c205-44df-9df3-50481886c15d
-TwoColumnWideLeft(
-	html"""
-	 <ul>
-  	<li><h5><span id="magenta">Interatomic potentials</span> approximate the potential energy of systems of atoms as a function of their positions and are seen <span id="magenta">as a computationally feasible alternative to electronic structure calculations.</span></li>
-  	<li><h5><span id="green">Empirical potentials have between 2 and 11 parameters</span>, rising to <span id="orange">1000 for modern machine-learning potentials (MLIPs)</span>. <span id="magenta">Highly nonlinear, UQ essential!</li>
-	<br>
-	<li><h5>My work: (i) <span id="green">maximum entropy priors for empirical potentials</span>; (ii) <span id="orange">Combining approximation theory and Bayesian inference for MLIPs .</li>
-	<li><h5><span id="green">One paper published (SIAP), <span id="orange">one manuscript in preparation.</span></li>
-	<br>
-	<li><h5><span id="pink">Visiting Fellowship at Newton Institute during the programme: Uncertainty quantification and stochastic modelling of materials</li>
-	<br>
-	<li><h5>Future funding proposals: <span id="orange">The Higher Education, Research and Innovation Department (HERI) of the French Embassy (funding for UK-France research links), Research-in-Groups at ICMS.</li>
-	</ul> 
-	""",
-	md""" $(Resource(ip_figure, :width => 800))
-
-	###### Collaborators: A.Mihai (Cardiff), T.Woolley (Cardiff), G.Dusson (CNRS Bourgogne Franche-Comté), J.Kermode (Warwick)
+# ╔═╡ 0c71572a-dfc9-4849-a592-f5e636e876fb
+TwoColumnWideLeft(html"""
+<ul><h4> <li> Background:
+	<ul>
+	  	<li><h4>Interatomic potentials</span> approximate the potential energy of systems of atoms as a function of their positions and are seen as a <span id="magenta">a coarse-grained counterpart to electronic structure calculations.</span>
+		<li> Empirical potentials have between 2 and 11 parameters</span>, rising to <span id="orange"> >1000 for modern machine-learning potentials (MLIPs)</span>. <span id="magenta">Highly nonlinear, UQ essential!</span></li>
+		</ul>
+<li> State of the art:
+	<ul>
+	<li> <div> UQ typically not conducted, uncertainty bars high for MLIPs when using "vanilla" approaches, even though some ML frameworks used are accurate  and improvable.</li>
+	</ul>
+</ul>
 	"""
+	,
+	md"""
+$(Resource(ip_figure, :width => 550))
+	"""
+)
+
+# ╔═╡ f8136a41-de25-454c-aba8-ae17528d2138
+TwoColumn(html"""
+<ul><h4>
+<li> What I have done:
+	<ul> 
+	<li> MLIPs are high-dimensional counterparts to Legendre polynomials
+	<li> <span id="green">Combine approximation theory and Bayesian inference
+	<li> <span id="pink">Visiting Fellowship at Newton Institute during the programme: Uncertainty quantification and stochastic modelling of materials
+"""
+	,
+	html"""
+<ul><h4>
+<li> What I want to do next:
+	<ul> 
+	<li> Extend the theory to MLIPs
+	<li> Develop Julia code for robust UQ
+	<li> Decrease uncertainty bars in a principled way!
+	<li> <span id="orange">Apply for funding: HERI Department of the French Embassy in the UK
+"""
 )
 
 # ╔═╡ a4b9fb3a-2a77-4301-b03f-702386375513
@@ -623,7 +800,7 @@ begin
 	E_Pmean = Fun(S, B*b)
 	# plotting
 	#xr = range(-1,1,length=100)
-	fig2 = scatter(x, y,label="data", size = (900, 300), title="\$ N = $(data_points),\\quad  P = $(poly_degree)\$")
+	fig2 = scatter(x, y,label="data", size = (900, 280), title="\$ N = $(data_points),\\quad  P = $(poly_degree)\$")
 	plot!(xr, E_Pmean.(xr), ribbon=(abs.(aa-E_Pmean.(x)),bb-E_Pmean.(x)),fc=:orange,fa=0.3,label="", linewidth=4)
 	plot!(xr, E_P0.(xr), label="model, f based ", linewidth=4)
 	plot!(xr, E_P1.(xr), label="model, f and Df based ", linewidth=4)
@@ -631,23 +808,20 @@ begin
 	nothing
 end
 
-# ╔═╡ 99c81597-09df-40a3-bc03-42fa4fbd4802
+# ╔═╡ b1b2d9c7-f423-4109-922e-843ef4d40022
 TwoColumn(md"""
 Given an unknown $\mathcal{E}\,\colon\,[-1,1] \to \mathbb{R}$ and data $D_N = \{(x_i,y_i)\}_{i=1}^N, y_i = (\mathcal{E}(x_i),\mathcal{E}'(x_i))$, let us reconstruct it using Legendre polynomials $E_P(x) := \sum_{i=1}^P c_i p_i(x)$.
 ```
 	x = range(-1, 1, length=n)
 	Ec(x) = sin(2*pi*x)
 	D_Ec(x) = ForwardDiff.derivative(Ec,x)
-	Y = [Ec.(x);D_Ec.(x)]
-		
+	Y = [Ec.(x);D_Ec.(x)]		
 	S = Legendre(x[begin]..x[end]) 	# Function space for approximations on the given interval
 	Der = Derivative(Legendre(), 1) 
-
 	# Build design matrix for linear regression
 	A = hcat((Fun(S, [zeros(k-1); 1]).(x) for k in 1:P)...)
 	AA = hcat(((Der*Fun(S, [zeros(k-1); 1])).(x) for k in 1:P)...)
 	AAA = vcat(A,AA)
-	
 	# Use linear regression to find the Legendre coefficients
 	θ_tilde1 = AAA\Y
 	E_P1 = Fun(S, θ_tilde1)
@@ -658,35 +832,29 @@ begin
 end
 )
 
-# ╔═╡ 071cdefb-bdd4-4f77-8b63-4e1408aedc6a
-TwoColumn(md""" $nbsp $nbsp """ , md"""
-#### (5)""")
-
 # ╔═╡ 47589ea7-8723-4375-9a50-4caf0909b18b
 md"""
-## My vision for the success of MARS
+## My vision for the success of MARS $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp  (10)
+"""
+
+# ╔═╡ d077bedf-a336-4008-b01f-41f627f8faeb
+html"""
+	<h3> Mathematical research in the age of AI
+ 	<ul> 
+  	<li><h4>Unprecedented access to data and computing power</span></li>
+	<li><h4>Current <span id="orange">lack of reliability and safety of black-box AI methodologies</span> 
+	<li><h4>Need for <span id="green">rigorous mathematical theory, algorithms and software</span> to <span id="orange">enable AI potential for predictive modelling</span>: simulation, analysis and control of complex multiscale real-world systems </span> in a computationally scalable way
+	<li><h4>Need for adoption of software-engineering working practices: Git integration, cloud computing and HPC clusters, communication platforms (Slack, Zulip), project management tools (Quire)
 """
 
 # ╔═╡ b47e6443-c067-4c34-9b86-6f3dca8a27e9
 	html"""
-	<h3> Mathematical research in the age of AI
-	 <ul>
-  	<li><h5>Unprecedented access to data and computing power</span></li>
-	<li><h5> Mathematicians are best positioned to "tame" the complexities involved with rigorous "pen & paper" analysis (we might be the last profession standing...)</li>
-	<li><h5>But for that to happen, especially for Real-world Systems, we need to "get our hands dirty": engage with practitioners, utilise computing resources (such as GPU-computing), embrace the modern "software-engineering" working practices:</li>
-	<ul>
-		<li><h5>Github/Gitlab integration, version control </li>
-		<li><h5>cloud computing, high-performance computing resources</li>
-		<li><h5>open-source communication-platforms such as Zulip</li>
-		<li><h5>project-management tools such as Quire</li>
-	</ul></li>
-	</ul>
 	<h3> My contribution
 	<ul>
-		<li><h5>cutting-edge applied analysis research in atomistic modelling of materials leading to reproducible results and usable software aimed at and developed with practitioners </li>
-		<li><h5>computationally-oriented data science research in optimal transport, with a materials engineering application and an industrial focus</li>
-		<li><h5>high-performance computing simulations using modern machine learning and AI oriented methodologies</li>
-		<li><h5><span id="pink">an open mind to new projects and collaborations and a broad research portfolio with many potential applications - vital to ensure the early-stage success of MARS</span></li>
+		<li><h4>cutting-edge applied analysis research in atomistic modelling of materials and software aimed at and developed with practitioners </li>
+		<li><h4>computationally-oriented data science research in optimal transport, with a <span id="pink">materials engineering application</span> and an <span id="pink">industrial focus</li>
+		<li><h4>high-performance computing simulations using modern machine learning and AI oriented methodologies</li>
+		<li><h4><span id="pink">an open mind to new projects and collaborations and a broad research portfolio with many potential applications - vital to ensure the early-stage success of MARS</span></li>
 	</ul>
 	<h3> Research links with Lancaster		
 	"""
@@ -696,58 +864,56 @@ TwoColumn(html"""
 
 		<h5>Mathematics and Statistics Department:
 		<ul>
-			<li><span id="green"> Prof. Gordon Blower </span> - optimal transport: <i>Transportation on spheres via an entropy formula</i></li>
-			<li><span id="green"> Prof. Chris Sherlock</span> - optimal transport: <i>Bounds on Wasserstein distances between distributions using independent samples</i>
-			<li><span id="green"> Prof. Christopher Nemeth</span> - optimal transport: <i>Coin Wasserstein Gradient Descent (Coin-ParVI)</i>
-			<li><span id="orange">Prob_AI_Hub</span> - optimal transport: Matthew Thorpe (co-I, Warwick) </li>
-			<li><span id="green">Dr Anthony Nixon</span> and <span id="green"> Dr Bernd Schulze </span> - discrete and computational geometry</li>
-			<li><span id="green">Prof. Christopher Jewell</span> - GPU computing: <i>Tensorflow Probability</i>
+			<li><span id="magenta"> Analysis group </span> -> theory of optimal transport</li>
+			<li><div><span id="magenta"> Bayesian and Computational Statistics group / Data Science Institute / Prob_AI_Hub</span></div> <div> -> Mean-field optimisation</div><div> -> Wasserstein Metric and Gradient Flows</div> -> GPU computing 
+			<li><div><span id="magenta">Algebra and Geometry / Geometric Rigidity groups </span></div> -> discrete and computational geometry tools </li>
 		</ul>
 """
 	,
 	html"""
 <h5>Wider University environment:
 		<ul>
-			<li><h5><span id="green"> Dr Samuel Murphy (Nuclear Materials and Engineering)</span> - MD simulations, DefAP: A python code for the analysis of point defects in crystalline solids</li>
-			<li><h5><span id="green"> Dr Neil Drummond (Physics) </span> - Electronic-structure calculation and quantum Monte Carlo simulation for 2D materials</li>
-			<li><h5><span id="green"> Prof. Abbie Trewin (Materials Chemistry) </span> - The Amorphous Builder (Ambuild) code which involves geometry optimisation and running of MD simulations</li>
-			<li><h5><span id="green"> Dr Wei Wen (Mechanical Engineering) </span> - multi-scale modelling of Crystal Plasticity (CP).</li>
+			<li><h5><span id="magenta"> Nuclear Materials and Engineering</span> -> MD simulations, DefAP: A python code for the analysis of point defects in crystalline solids</li>
+			<li><h5><span id="magenta"> Physics </span> -> Electronic-structure calculation and quantum Monte Carlo simulation for 2D materials</li>
+			<li><h5><span id="magenta"> Materials Chemistry </span> -> The Amorphous Builder (Ambuild) code which involves geometry optimisation and running of MD simulations</li>
+			<li><h5><span id="magenta"> Mechanical Engineering </span> -> multi-scale modelling of Crystal Plasticity (CP).</li>
 		</ul>
 	"""
 )
 
-# ╔═╡ 0f33a0f6-052f-49eb-803a-e108c9509568
-TwoColumn(md""" $nbsp $nbsp """ , md"""
-#### (6)""")
-
 # ╔═╡ 66890fc9-1872-4c5a-80bd-f4194428b42b
 md"""
-## My vision for the success of MARS
+## My vision for the success of MARS $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp (11)
 """
 
 # ╔═╡ 1fb30bc5-3ddd-4d87-b5b9-9009a674ff29
 	html"""
 	<h3> Mathematical education in the age of AI
 	 <ul>
-  	<li><h5>Unprecedented access to data and computing power</span></li>
+  	<li><h4>Unprecedented access to data and computing power</span></li>
 	<br>
-  	<li><h5> Critical, creative and abstract thinking can soon be the last remaining employability asset...</li>
+  	<li><h4> Critical, creative and abstract thinking can soon be the last remaining employability asset...</li>
 	<br>
-	<li><h5>We should double-down on rigorous mathematical education, but embed it into a modern <span id="orange">computationally-native</span> context:</li>
+	<li><h4>We should double-down on <span id="green">rigorous mathematical education</span>, but embed it into a modern <span id="orange">AI- and computationally-native</span> context:</li>
 	<ul>
-		<li><h5>Github/Gitlab integration, version control </li>
-		<li><h5>cloud computing, high-performance computing resources</li>
-		<li><h5>open-source communication-platforms such as Zulip</li>
-		<li><h5>project-management tools such as Quire</li>
+		<li><h4>Github/Gitlab integration, version control </li>
+		<li><h4>cloud computing, high-performance computing resources</li>
+		<li><h4>open-source communication-platforms such as Zulip</li>
+		<li><h4>project-management tools such as Quire</li>
 	</ul></li>
 	</ul>
 	<h3> My contribution
 	<ul>
-		<li><h5><span id="orange"> developing modern analysis / numerical analysis / numerical methods / scientific computation courses at various levels, in which I will combine my versatile computational experience in Python, Julia, SageMath and Desmos. </li>
+		<li><h4><span id="orange"> developing modern analysis / numerical analysis / numerical methods / computational optimal transport / scientific computation courses at various levels, in which I will combine my versatile computational experience in Python, Julia, SageMath and Desmos. </li>
+		<ul>
+			<li><h4> <span id="pink"> Example: My 2-day course at the Summer School on Deep Learning Approaches to Mathematical Imaging Techiques</span>
+		</ul>
 		<br>
-		<li><h5>bespoke GitLab integration, version control for homework submission </li>
+		<li> <h4>BSc/MSci/MSc projects: computational optimal transport approaches to resource allocation, numerical continuation methods for nonlinear equations with application in geometry optimisation 
+		<br><br>
+		<li><h4>bespoke GitLab integration, version control for homework submission </li>
 		<br>
-		<li><h5>engaging with students using industry standards (Slack/Zulip/Quire)</li>
+		<li><h4>engaging with students using industry standards (Slack/Zulip/Quire)</li>
 	"""
 
 # ╔═╡ 3dbfa412-dbd6-4efe-9c81-118905ad4bc0
@@ -759,16 +925,9 @@ md"""
 # ╔═╡ eb8e0263-886a-4ad4-afd7-3174f9756e2a
 
 
-# ╔═╡ d6b5c960-e9d6-4079-b950-d7c465782b29
-
-
-# ╔═╡ 6f395ff1-ffd2-46ad-b1b6-538b53a00a98
-TwoColumn(md""" $nbsp $nbsp """ , md"""
-#### (7)""")
-
 # ╔═╡ 89f8c606-c8a5-4300-9662-8b36e2537f8c
 md"""
-## "Computationally-native" teaching example
+## "Computationally-native" teaching example $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp $nbsp (12)
 """
 
 # ╔═╡ 4a87efe7-f1ec-49ba-99d4-75515879d540
@@ -951,9 +1110,52 @@ TwoColumnWideLeft(
 	fig_trap
 )
 
-# ╔═╡ eadb07d9-9227-4479-890a-f3bea3efc8f5
-TwoColumn(md""" $nbsp $nbsp """ , md"""
-#### (8)""")
+# ╔═╡ db314d41-ee83-4774-9754-7a45913ba446
+md"""
+## Thank you!
+"""
+
+# ╔═╡ 0399d961-0c75-40a7-a5f3-6e88a034ecd6
+
+
+# ╔═╡ b437c8fd-0182-4dcb-a655-896140edcc73
+
+
+# ╔═╡ c26fb992-149c-40a0-bafa-532f1536813a
+
+
+# ╔═╡ ad29edf5-b85b-42e2-a404-5ea4720e80fa
+
+
+# ╔═╡ 047b0d3b-e430-454e-b323-26959c972de0
+
+
+# ╔═╡ b517db46-7994-4801-869d-cbc636152813
+
+
+# ╔═╡ d619c662-83f7-4c47-af4f-34f8507d4218
+
+
+# ╔═╡ e7e77ed7-1566-4525-a1d0-e9e21563ea67
+md"""
+
+### My contact details: 
+
+
+- #### Email: m.buze@hw.ac.uk
+
+
+- #### Website: https://mbuze.github.io
+
+
+- #### GitHub: https://github.com/mbuze/
+
+
+- #### PyAPD: https://github.com/mbuze/PyAPD
+"""
+
+# ╔═╡ 377d3e29-2207-45a0-8778-44487d32de3f
+
 
 # ╔═╡ Cell order:
 # ╟─b2f34b36-6ce4-441f-a007-ae77273291c8
@@ -980,52 +1182,68 @@ TwoColumn(md""" $nbsp $nbsp """ , md"""
 # ╟─a753156d-88a1-49ca-9223-5cb4077cc626
 # ╟─fa0842af-36f4-46ef-8faf-dc5a6593957b
 # ╟─1a0877a6-747b-4c0f-8993-9f5648d3e623
+# ╟─d3dffafc-227d-4258-93d1-61d4cede38ab
 # ╟─60cf1098-5887-49fa-b28b-7d14d75d6ef2
-# ╟─8b5b4088-060e-45e7-b3ff-1581f27a67df
-# ╟─035f9e75-5255-4798-83e1-e2723f1837f4
-# ╟─acec9ef0-9e35-4a31-9a14-2e4114ed6e04
+# ╟─f429d1e1-a6b3-4677-8420-7b6fb4e565c2
 # ╟─6a11493b-e486-4dee-a0ba-80fdd9b542da
 # ╟─cd58a897-3e18-4eb2-a81d-89dfb00257d0
 # ╟─d5a8d207-80a6-4d22-b500-9448cbd0c339
-# ╟─103b2f93-ebf0-42c8-92ca-2632a9b1005b
-# ╟─c3790891-2336-4108-9285-3ed85de872d7
 # ╟─0ed3fa19-b22b-46ca-a090-fcde0383d0d3
 # ╟─3d0a89b5-3733-4029-a908-d31c8a38265b
+# ╟─dcb910b6-31d5-4232-8f36-125679216d88
+# ╟─3eed7b97-c5f4-4d4e-83c9-0ea559c7c438
+# ╟─f5e88b25-be59-443a-8b60-f7dbd935ee68
+# ╟─e16536ad-4f0f-40c2-9ae3-26857e47743f
 # ╠═d7e723d8-04f4-464b-9572-793f6349b63e
 # ╟─1705424a-163d-4ec3-b5d5-c5bd4b0ca7ea
 # ╟─cd8181a0-53be-40f0-94ac-680e41192e31
-# ╟─6a8aeb0a-a570-4f74-83d3-ab321ab25911
 # ╟─2fab6ede-98d3-4783-9bc3-6ae4f95e9c8e
-# ╟─9a6e9a57-8ac1-47f1-b00b-7c3907b2720e
+# ╟─1ca19cdb-26a9-4d8b-86bb-1306e9c8e449
+# ╟─4f7e0ee2-4f32-4bac-ad87-e45576444fdc
+# ╟─740278d3-c252-4810-953b-ab4bca22a8a7
 # ╠═53c0f81d-0019-4799-8725-e4b3420d684e
 # ╟─c62a52e1-249b-48a6-90ae-f8552bf9a224
-# ╟─ed1fa3d5-ef9b-489a-9f73-0067896f1c95
-# ╟─9b62c56d-4ced-4117-b20f-040a84ce8d3a
-# ╟─127a3661-b34a-458d-adea-7d9e98ed3415
-# ╟─7ac043a5-f6f9-4826-a8f1-29fdaa7687b1
-# ╠═2b621d5e-1d9e-43ee-98db-1d5b5f2a80d7
+# ╟─8d4e2dde-6e25-483c-9026-2d6234973290
+# ╟─808b6f22-29f9-43cc-a7f9-be1cd90e7f19
+# ╟─0fd0bfae-5ccb-46f7-908c-731843b28bc1
+# ╟─1810a57b-e1d8-4a09-a58e-c5c1a2aabc64
+# ╟─f1825a7d-1657-4648-8260-98d6884d0011
+# ╟─182a6eae-f48d-48b4-ab24-eca615ee5367
+# ╟─a566f782-5f68-4354-9f5c-b81334a08142
+# ╟─9c4cc9b6-8e88-4016-932e-f90770044376
+# ╟─1ee98213-7875-4d54-8004-aea2240cee50
+# ╟─929c6dc8-9e16-4ccf-b288-012cb84d0c8e
+# ╟─ed8f828a-b59f-42af-b55d-65fbdaf15da3
+# ╟─b42ed316-95f9-4082-a328-7614ead55434
+# ╠═36d84ac7-b0fd-4d70-aa94-212db92696d9
 # ╟─94d185b1-e3b7-46fe-a4ff-60c5956d86b2
-# ╟─39e98f07-d1d7-4f4b-b052-77dfa4c5d322
-# ╟─f0face85-80c0-4367-b5e2-a13c4598bcf7
+# ╟─e55fb776-b8fd-4414-b5b0-8cd013b325d2
 # ╟─d4660044-8438-4502-84e1-031813e9ca25
-# ╟─7ba63a0e-c205-44df-9df3-50481886c15d
+# ╟─0c71572a-dfc9-4849-a592-f5e636e876fb
+# ╟─f8136a41-de25-454c-aba8-ae17528d2138
 # ╠═9c684b79-bf17-4ee2-a2f5-9c5ef6dcae59
 # ╟─a4b9fb3a-2a77-4301-b03f-702386375513
-# ╟─99c81597-09df-40a3-bc03-42fa4fbd4802
-# ╟─071cdefb-bdd4-4f77-8b63-4e1408aedc6a
+# ╟─b1b2d9c7-f423-4109-922e-843ef4d40022
 # ╟─47589ea7-8723-4375-9a50-4caf0909b18b
+# ╟─d077bedf-a336-4008-b01f-41f627f8faeb
 # ╟─b47e6443-c067-4c34-9b86-6f3dca8a27e9
 # ╟─58a81bb8-6714-48e4-b1e2-bd8b2fe34675
-# ╟─0f33a0f6-052f-49eb-803a-e108c9509568
 # ╟─66890fc9-1872-4c5a-80bd-f4194428b42b
 # ╟─1fb30bc5-3ddd-4d87-b5b9-9009a674ff29
 # ╟─3dbfa412-dbd6-4efe-9c81-118905ad4bc0
 # ╟─fb474f4d-fc4e-4d4a-b783-65de9a64499b
 # ╟─eb8e0263-886a-4ad4-afd7-3174f9756e2a
-# ╟─d6b5c960-e9d6-4079-b950-d7c465782b29
-# ╟─6f395ff1-ffd2-46ad-b1b6-538b53a00a98
 # ╟─89f8c606-c8a5-4300-9662-8b36e2537f8c
 # ╟─4a87efe7-f1ec-49ba-99d4-75515879d540
 # ╟─2edfa6cb-beb4-4f63-a736-7efdaf3dd07e
 # ╟─f910535b-4746-4845-b5ec-7fecc9b15656
-# ╟─eadb07d9-9227-4479-890a-f3bea3efc8f5
+# ╟─db314d41-ee83-4774-9754-7a45913ba446
+# ╟─0399d961-0c75-40a7-a5f3-6e88a034ecd6
+# ╟─b437c8fd-0182-4dcb-a655-896140edcc73
+# ╟─c26fb992-149c-40a0-bafa-532f1536813a
+# ╟─ad29edf5-b85b-42e2-a404-5ea4720e80fa
+# ╟─047b0d3b-e430-454e-b323-26959c972de0
+# ╟─b517db46-7994-4801-869d-cbc636152813
+# ╟─d619c662-83f7-4c47-af4f-34f8507d4218
+# ╠═e7e77ed7-1566-4525-a1d0-e9e21563ea67
+# ╟─377d3e29-2207-45a0-8778-44487d32de3f
