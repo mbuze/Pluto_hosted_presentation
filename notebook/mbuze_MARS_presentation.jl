@@ -843,7 +843,7 @@ html"""
  	<ul> 
   	<li><h4>Unprecedented access to data and computing power</span></li>
 	<li><h4>Current <span id="orange">lack of reliability and safety of black-box AI methodologies</span> 
-	<li><h4>Need for <span id="green">rigorous mathematical theory, algorithms and software</span> to <span id="orange">enable AI potential for predictive modelling</span>: simulation, analysis and control of complex multiscale real-world systems </span> in a computationally scalable way
+	<li><h4>Need for <span id="green">rigorous mathematical theory, algorithms and software</span> to <span id="orange">enable physics-based AI potential for predictive modelling</span>: simulation, analysis and control of complex multiscale real-world systems </span> in a computationally scalable way
 	<li><h4>Need for adoption of software-engineering working practices: Git integration, cloud computing and HPC clusters, communication platforms (Slack, Zulip), project management tools (Quire)
 """
 
