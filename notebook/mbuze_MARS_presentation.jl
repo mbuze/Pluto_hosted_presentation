@@ -365,8 +365,8 @@ md"""
 # ╔═╡ 1ca19cdb-26a9-4d8b-86bb-1306e9c8e449
 TwoColumnWideLeft(
 	html"""
-<h5>Jasper Jolly, The Guardian, Sat 15 July 2023:
-<h5>``<span id="pink">To list the products that use steel is to list much of modern life</span>:
+<h4>Jasper Jolly, The Guardian, Sat 15 July 2023:
+<h4>``<span id="pink">To list the products that use steel is to list much of modern life</span>:
 <ul>
 <li> Port Talbot provided most of the steel in the Nissan Leaf electric car, built in Sunderland.
 	<br><br>
@@ -841,9 +841,9 @@ md"""
 html"""
 	<h3> Mathematical research in the age of AI
  	<ul> 
-  	<li><h4>Unprecedented access to data and computing power</span></li>
+  	<h4><li>Unprecedented access to data and computing power</span></li>
 	<li><h4>Current <span id="orange">lack of reliability and safety of black-box AI methodologies</span> 
-	<li><h4>Need for <span id="green">rigorous mathematical theory, algorithms and software</span> to <span id="orange">enable physics-based AI potential for predictive modelling</span>: simulation, analysis and control of complex multiscale real-world systems </span> in a computationally scalable way
+	<li><h4>Need for <span id="green">rigorous mathematical theory, algorithms and software</span> to <span id="orange">develop physics-based AI for predictive modelling</span> of complex multiscale real-world systems </span>
 	<li><h4>Need for adoption of software-engineering working practices: Git integration, cloud computing and HPC clusters, communication platforms (Slack, Zulip), project management tools (Quire)
 """
 
@@ -1245,5 +1245,5 @@ md"""
 # ╟─047b0d3b-e430-454e-b323-26959c972de0
 # ╟─b517db46-7994-4801-869d-cbc636152813
 # ╟─d619c662-83f7-4c47-af4f-34f8507d4218
-# ╠═e7e77ed7-1566-4525-a1d0-e9e21563ea67
+# ╟─e7e77ed7-1566-4525-a1d0-e9e21563ea67
 # ╟─377d3e29-2207-45a0-8778-44487d32de3f
